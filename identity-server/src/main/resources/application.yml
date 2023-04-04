@@ -1,0 +1,15 @@
+server:
+  port: 8086
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/identityserver
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  config:
+    import: optional:configserver:http://localhost:8085
+  application:
+    name: identity-server
